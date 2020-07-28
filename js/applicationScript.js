@@ -62,7 +62,7 @@ var loadSongs = function(){
   client.sendRequest("GET", "songs", "", "", {}, false,
   function(data, type) {
     console.log(data); 
-    document.getElementById("p").innerText = data;
+    document.getElementById("p").innerText = data.map(x => x.title);
   },
   function(error) {
     console.log(error);
